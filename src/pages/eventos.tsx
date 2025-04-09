@@ -52,7 +52,7 @@ export default function Eventos() {
               target="_self"
               onSubmit={() => setEventoSelecionado(null)}
             >
-              <input type="hidden" name="_redirect" value="https://fgolf.vercel.app/pagamento" />
+              <input type="hidden" name="_next" value="https://fgolf.vercel.app/pagamento"/>
               <input type="hidden" name="evento" value={eventoSelecionado ?? ''} />
 
               <label className="block mb-4">

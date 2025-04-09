@@ -42,7 +42,7 @@ export default function OpenLisboa() {
               target="_self"
               onSubmit={() => setMostrarModal(false)}
             >
-              <input type="hidden" name="_redirect" value="hhttps://fgolf.vercel.app/pagamento" />
+              <input type="hidden" name="_next" value="hhttps://fgolf.vercel.app/pagamento" />
               <input type="hidden" name="evento" value="Open Lisboa" />
 
               <label className="block mb-4">

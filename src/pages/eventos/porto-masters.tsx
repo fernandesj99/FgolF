@@ -41,7 +41,7 @@ export default function PortoMasters() {
               target="_self"
               onSubmit={() => setMostrarModal(false)}
             >
-              <input type="hidden" name="_redirect" value="https://fgolf.vercel.app/pagamento" />
+              <input type="hidden" name="_next" value="https://fgolf.vercel.app/pagamento" />
               <input type="hidden" name="evento" value="Porto Masters" />
 
               <label className="block mb-4">
