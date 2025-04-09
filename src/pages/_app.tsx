@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: any) {
           <li><Link href="/">Home</Link></li>
           <li><Link href="/eventos">Eventos</Link></li>
           <li><Link href="/jogadores">Jogadores</Link></li>
-          <li><Link href="/notícias">Notícias</Link></li>
+          <li><Link href="/noticias">Notícias</Link></li>
         </ul>
       </nav>
       <Component {...pageProps} />
