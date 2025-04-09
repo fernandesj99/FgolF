@@ -1,9 +1,9 @@
 export default function Patrocinios() {
     const patrocinadores = [
       {
-        nome: "GolfPro",
-        descricao: "Equipamento oficial dos eventos FgolF.",
-        logo: "/logos/golfpro.png",
+        nome: "J.Lindeberg",
+        descricao: "Roupa técnica oficial dos jogadores do FgolF.",
+        logo: "/logos/jlindeberg.png",
       },
       {
         nome: "Tissot",
@@ -24,6 +24,11 @@ export default function Patrocinios() {
         nome: "Super Bock",
         descricao: "Parceiro de celebração dos grandes momentos.",
         logo: "/logos/superbock.png",
+      },
+      {
+        nome: "Mercedes-Benz",
+        descricao: "Mobilidade premium nos eventos FgolF.",
+        logo: "/logos/mercedes.png",
       },
     ];
   
