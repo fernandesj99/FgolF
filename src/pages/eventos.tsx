@@ -1,12 +1,13 @@
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Eventos() {
   const [eventoSelecionado, setEventoSelecionado] = useState<string | null>(null);
 
   const eventos = [
-    { nome: "Open Lisboa", data: "21 de Abril de 2025" },
-    { nome: "Porto Masters", data: "3 de Maio de 2025" },
-    { nome: "Algarve Challenge", data: "17 de Maio de 2025" },
+    { nome: "Open Lisboa", data: "21 de Abril de 2025", slug: "open-lisboa" },
+    { nome: "Porto Masters", data: "3 de Maio de 2025", slug: "porto-masters" },
+    { nome: "Algarve Challenge", data: "17 de Maio de 2025", slug: "algarve-challenge" },
   ];
 
   return (
@@ -18,12 +19,21 @@ export default function Eventos() {
           <div key={idx} className="bg-gray-800 p-6 rounded shadow">
             <h2 className="text-xl font-semibold text-lime-300">{evento.nome}</h2>
             <p className="text-gray-300 mt-2">{evento.data}</p>
-            <button
-              onClick={() => setEventoSelecionado(evento.nome)}
-              className="mt-4 bg-lime-400 text-black font-bold px-4 py-2 rounded hover:bg-lime-300 transition"
-            >
-              Inscrever
-            </button>
+
+            <div className="flex justify-between items-center mt-6 gap-4">
+              <button
+                onClick={() => setEventoSelecionado(evento.nome)}
+                className="w-full bg-lime-400 text-black font-bold px-4 py-2 rounded hover:bg-lime-300 transition"
+              >
+                Inscrever
+              </button>
+
+              <Link href={`/eventos/${evento.slug}`} className="w-full">
+                <button className="w-full bg-blue-500 text-white font-semibold px-4 py-2 rounded hover:bg-blue-600 transition">
+                  Saber mais
+                </button>
+              </Link>
+            </div>
           </div>
         ))}
       </div>
