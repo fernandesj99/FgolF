@@ -12,8 +12,7 @@ export default function Pagamento() {
   
           <p className="text-gray-300 mb-1">IBAN: <span className="font-mono">PT50 0000 0000 0000 0000 0000</span></p>
           <p className="text-gray-300 mb-6">MBWay: <span className="font-mono">939 337 492</span></p>
-          <p className="text-gray-300 mb-6">Referência Multibanco: <span className="font-mono">Entidade: 00000 Referência: 000 000 000</span></p>  
-
+          
           <p className="text-sm text-gray-400">Após o pagamento, receberá confirmação por e-mail.</p>
         </div>
       </div>
