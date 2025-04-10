@@ -51,9 +51,10 @@ export default function Eventos() {
               method="POST"
               target="_self"
               onSubmit={() => {
+                console.log('Formulário enviado. A redirecionar...');
                 setTimeout(() => {
                   window.location.href = `https://fgolf.vercel.app/pagamento?evento=${eventoSelecionado?.toLowerCase().replaceAll(' ', '-')}`;
-                }, 150);
+                }, 1000);
               }}
             >
               <input type="hidden" name="evento" value={eventoSelecionado ?? ''} />

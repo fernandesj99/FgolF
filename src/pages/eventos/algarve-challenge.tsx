@@ -41,8 +41,9 @@ export default function AlgarveChallenge() {
               target="_self"
               onSubmit={() => {
                 setTimeout(() => {
+                  console.log('Formulário enviado. A redirecionar...');                    
                   window.location.href = 'https://fgolf.vercel.app/pagamento?evento=algarve-challenge';
-                }, 150);
+                }, 1000);
               }}              
             >
               <input 
