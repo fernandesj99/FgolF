@@ -40,7 +40,6 @@ export default function OpenLisboa() {
               action="https://formspree.io/f/xeoavogl"
               method="POST"
               target="_self"
-              onSubmit={() => setMostrarModal(false)}
             >
               <input type="hidden" name="_next" value="hhttps://fgolf.vercel.app/pagamento" />
               <input type="hidden" name="evento" value="Open Lisboa" />
