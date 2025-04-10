@@ -30,7 +30,6 @@ export default function OpenLisboa() {
         </button>
       </div>
 
-      {/* Modal de inscrição */}
       {mostrarModal && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
           <div className="bg-white text-black rounded p-8 w-full max-w-md shadow-lg">
@@ -40,70 +39,32 @@ export default function OpenLisboa() {
               action="https://formspree.io/f/xeoavogl"
               method="POST"
               target="_self"
+              onSubmit={() => {
+                setTimeout(() => {
+                  window.location.href = 'https://fgolf.vercel.app/pagamento?evento=open-lisboa';
+                }, 150);
+              }}
             >
-              <input 
-              type="hidden" 
-              name="_next" 
-              value="https://fgolf.vercel.app/pagamento?evento=open-lisboa" />
               <input type="hidden" name="evento" value="Open Lisboa" />
-
               <label className="block mb-4">
                 Nome:
-                <input
-                  type="text"
-                  name="nome"
-                  required
-                  className="w-full mt-1 p-2 border border-gray-300 rounded"
-                />
+                <input type="text" name="nome" required className="w-full mt-1 p-2 border border-gray-300 rounded" />
               </label>
-
               <label className="block mb-4">
                 Email:
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  className="w-full mt-1 p-2 border border-gray-300 rounded"
-                />
+                <input type="email" name="email" required className="w-full mt-1 p-2 border border-gray-300 rounded" />
               </label>
-
               <label className="block mb-4">
                 Nº de Sócio da Federação Portuguesa de Golfe:
-                <input
-                  type="text"
-                  name="socio"
-                  required
-                  className="w-full mt-1 p-2 border border-gray-300 rounded"
-                />
+                <input type="text" name="socio" required className="w-full mt-1 p-2 border border-gray-300 rounded" />
               </label>
-
               <label className="block mb-6">
                 Nº de Telemóvel:
-                <input
-                  type="tel"
-                  name="telemovel"
-                  required
-                  pattern="[0-9]{9}"
-                  title="Número de 9 dígitos"
-                  className="w-full mt-1 p-2 border border-gray-300 rounded"
-                />
+                <input type="tel" name="telemovel" required pattern="[0-9]{9}" title="Número de 9 dígitos" className="w-full mt-1 p-2 border border-gray-300 rounded" />
               </label>
-
               <div className="flex justify-between">
-                <button
-                  type="button"
-                  onClick={() => setMostrarModal(false)}
-                  className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
-                >
-                  Cancelar
-                </button>
-
-                <button
-                  type="submit"
-                  className="px-4 py-2 bg-lime-500 text-white font-semibold rounded hover:bg-lime-400"
-                >
-                  Confirmar
-                </button>
+                <button type="button" onClick={() => setMostrarModal(false)} className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Cancelar</button>
+                <button type="submit" className="px-4 py-2 bg-lime-500 text-white font-semibold rounded hover:bg-lime-400">Confirmar</button>
               </div>
             </form>
           </div>

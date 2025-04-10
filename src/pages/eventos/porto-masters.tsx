@@ -39,6 +39,11 @@ export default function PortoMasters() {
               action="https://formspree.io/f/xeoavogl"
               method="POST"
               target="_self"
+              onSubmit={() => {
+                setTimeout(() => {
+                  window.location.href = 'https://fgolf.vercel.app/pagamento?evento=porto-masters';
+                }, 150);
+              }}
             >
               <input 
               type="hidden" 

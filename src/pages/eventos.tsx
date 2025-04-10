@@ -50,8 +50,12 @@ export default function Eventos() {
               action="https://formspree.io/f/xeoavogl"
               method="POST"
               target="_self"
+              onSubmit={() => {
+                setTimeout(() => {
+                  window.location.href = `https://fgolf.vercel.app/pagamento?evento=${eventoSelecionado?.toLowerCase().replaceAll(' ', '-')}`;
+                }, 150);
+              }}
             >
-              <input type="hidden" name="_next" value="https://fgolf.vercel.app/pagamento"/>
               <input type="hidden" name="evento" value={eventoSelecionado ?? ''} />
 
               <label className="block mb-4">
