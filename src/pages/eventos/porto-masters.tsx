@@ -40,7 +40,10 @@ export default function PortoMasters() {
               method="POST"
               target="_self"
             >
-              <input type="hidden" name="_next" value="https://fgolf.vercel.app/pagamento" />
+              <input 
+              type="hidden" 
+              name="_next" 
+              value="https://fgolf.vercel.app/pagamento?evento=porto-masters" />
               <input type="hidden" name="evento" value="Porto Masters" />
 
               <label className="block mb-4">

@@ -40,7 +40,10 @@ export default function AlgarveChallenge() {
               method="POST"
               target="_self"
             >
-              <input type="hidden" name="_next" value="https://fgolf.vercel.app/pagamento" />
+              <input 
+              type="hidden" 
+              name="_next" 
+              value="https://fgolf.vercel.app/pagamento?evento=algarve-challenge" />
               <input type="hidden" name="evento" value="Algarve Challenge" />
 
               <label className="block mb-4">

@@ -41,7 +41,10 @@ export default function OpenLisboa() {
               method="POST"
               target="_self"
             >
-              <input type="hidden" name="_next" value="https://fgolf.vercel.app/pagamento" />
+              <input 
+              type="hidden" 
+              name="_next" 
+              value="https://fgolf.vercel.app/pagamento?evento=open-lisboa" />
               <input type="hidden" name="evento" value="Open Lisboa" />
 
               <label className="block mb-4">
