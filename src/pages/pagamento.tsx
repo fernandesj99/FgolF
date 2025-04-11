@@ -25,7 +25,7 @@ export default function Pagamento() {
         <p className="mb-4">Local: {evento.local}</p>
 
         <div className="bg-blue-800 p-4 rounded mb-6 text-left">
-          <p className="mb-2"><strong>Valor a pagar:</strong> {evento.preco}€</p>
+          <p className="mb-2"><strong>Valor a pagar:</strong> {evento.preco}</p>
 
           <p className="mb-2"><strong>IBAN:</strong><br />PT50 0000 0000 0000 0000 0000 0</p>
 
