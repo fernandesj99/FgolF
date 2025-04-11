@@ -18,7 +18,7 @@ export default function PortoMasters() {
 
       <div className="bg-blue-900 p-4 rounded mb-6">
         <p><strong>Prize Pool:</strong> {evento.premio}</p>
-        <p><strong>Custo de Entrada:</strong> {evento.preco}€</p>
+        <p><strong>Custo de Entrada:</strong> {evento.preco}</p>
         <p><strong>Ofertas Incluídas:</strong> {evento.ofertas}</p>
         <p><strong>Patrocínios:</strong> {evento.patrocinadores.join(', ')}</p>
       </div>
