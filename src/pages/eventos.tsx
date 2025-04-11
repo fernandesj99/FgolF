@@ -1,14 +1,11 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import { eventos } from '../data/eventos'; // Usa caminho relativo se não estiveres a usar alias
 
 export default function Eventos() {
   const [eventoSelecionado, setEventoSelecionado] = useState<string | null>(null);
 
-  const eventos = [
-    { nome: "Open Lisboa", data: "21 de Abril de 2025", slug: "open-lisboa" },
-    { nome: "Porto Masters", data: "3 de Maio de 2025", slug: "porto-masters" },
-    { nome: "Algarve Challenge", data: "17 de Maio de 2025", slug: "algarve-challenge" },
-  ];
+  const eventoObj = eventos.find(e => e.nome === eventoSelecionado);
 
   return (
     <div className="min-h-screen bg-black text-white p-10">
@@ -39,22 +36,19 @@ export default function Eventos() {
       </div>
 
       {/* Modal de inscrição */}
-      {eventoSelecionado && (
+      {eventoSelecionado && eventoObj && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
           <div className="bg-white text-black rounded p-8 w-full max-w-md shadow-lg">
-            <h3 className="text-xl font-bold mb-4">
-              Inscreve-te no {eventoSelecionado}
-            </h3>
+            <h3 className="text-xl font-bold mb-4">Inscrição no {eventoSelecionado}</h3>
 
             <form
               action="https://formspree.io/f/xeoavogl"
               method="POST"
               target="_self"
               onSubmit={() => {
-                console.log('Formulário enviado. A redirecionar...');
                 setTimeout(() => {
-                  window.location.href = `https://fgolf.vercel.app/pagamento?evento=${eventoSelecionado?.toLowerCase().replaceAll(' ', '-')}`;
-                }, 1000);
+                  window.location.href = `https://fgolf.vercel.app/pagamento?evento=${eventoObj.slug}`;
+                }, 500);
               }}
             >
               <input type="hidden" name="evento" value={eventoSelecionado ?? ''} />

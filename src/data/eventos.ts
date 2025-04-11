@@ -1,0 +1,40 @@
+// src/data/eventos.ts
+
+export const eventos = [
+    {
+      nome: "Open Lisboa",
+      slug: "open-lisboa",
+      data: "21 de Abril de 2025",
+      hora: "11h00",
+      local: "Jamor",
+      descricao: "O Open Lisboa é o torneio inaugural do circuito FgolF 2025, reunindo os melhores jogadores num desafio técnico e emocionante no Jamor.",
+      preco: "25€",
+      premio: "7.500€",
+      ofertas: "Kit de boas-vindas, t-shirt oficial, bebida energética",
+      patrocinadores: ["Sagres", "Adidas Golf", "Santander"],
+    },
+    {
+      nome: "Porto Masters",
+      slug: "porto-masters",
+      data: "3 de Maio de 2025",
+      hora: "14h00",
+      local: "Campo de Golfe de Espinho",
+      descricao: "O Porto Masters é um dos torneios mais prestigiados da temporada, reunindo jogadores nacionais e internacionais num palco clássico do golfe em Portugal.",
+      preco: "30€",
+      premio: "10.000€",
+      ofertas: "Welcome pack, bolas oficiais, bebida de boas-vindas",
+      patrocinadores: ["Super Bock", "Nike Golf", "BPI"],
+    },
+    {
+      nome: "Algarve Challenge",
+      slug: "algarve-challenge",
+      data: "17 de Maio de 2025",
+      hora: "10h00",
+      local: "Vilamoura Golf Resort",
+      descricao: "O Algarve Challenge fecha a primavera do circuito com uma etapa solarenga no sul. Um campo técnico e paisagens incríveis garantem emoção até ao fim.",
+      preco: "35€",
+      premio: "12.500€",
+      ofertas: "Polo oficial FgolF, snacks energéticos, vouchers",
+      patrocinadores: ["Galp", "Callaway", "Delta Cafés"],
+    },
+  ];
