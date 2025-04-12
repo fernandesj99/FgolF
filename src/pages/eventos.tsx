@@ -1,11 +1,42 @@
 import { useState } from 'react';
+import { supabase } from '../lib/supabase';
 import Link from 'next/link';
-import { eventos } from '../data/eventos'; // Usa caminho relativo se não estiveres a usar alias
+import { eventos } from '../data/eventos';
 
 export default function Eventos() {
   const [eventoSelecionado, setEventoSelecionado] = useState<string | null>(null);
-
   const eventoObj = eventos.find(e => e.nome === eventoSelecionado);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const nome = formData.get('nome')?.toString() || '';
+    const email = formData.get('email')?.toString() || '';
+    const socio = formData.get('socio')?.toString() || '';
+    const telemovel = formData.get('telemovel')?.toString() || '';
+    const evento = eventoSelecionado;
+
+    // 1. Inserir no Supabase
+    const { data, error } = await supabase.from('inscricoes').insert([
+      { evento, nome, email, socio, telemovel },
+    ]);
+
+    console.log('SUPABASE:', { data, error });
+
+    // 2. Enviar para Formspree
+    await fetch('https://formspree.io/f/xeoavogl', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ evento, nome, email, socio, telemovel }),
+    });
+
+    // 3. Redirecionar
+    setEventoSelecionado(null);
+    window.location.href = `/pagamento?evento=${eventoObj?.slug}`;
+  };
 
   return (
     <div className="min-h-screen bg-black text-white p-10">
@@ -35,52 +66,28 @@ export default function Eventos() {
         ))}
       </div>
 
-      {/* Modal de inscrição */}
+      {/* Modal */}
       {eventoSelecionado && eventoObj && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
           <div className="bg-white text-black rounded p-8 w-full max-w-md shadow-lg">
             <h3 className="text-xl font-bold mb-4">Inscrição no {eventoSelecionado}</h3>
 
-            <form
-              action="https://formspree.io/f/xeoavogl"
-              method="POST"
-              target="_self"
-              onSubmit={() => {
-                setTimeout(() => {
-                  window.location.href = `https://fgolf.vercel.app/pagamento?evento=${eventoObj.slug}`;
-                }, 500);
-              }}
-            >
+            <form onSubmit={handleSubmit}>
               <input type="hidden" name="evento" value={eventoSelecionado ?? ''} />
 
               <label className="block mb-4">
                 Nome:
-                <input
-                  type="text"
-                  name="nome"
-                  required
-                  className="w-full mt-1 p-2 border border-gray-300 rounded"
-                />
+                <input type="text" name="nome" required className="w-full mt-1 p-2 border rounded" />
               </label>
 
               <label className="block mb-4">
                 Email:
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  className="w-full mt-1 p-2 border border-gray-300 rounded"
-                />
+                <input type="email" name="email" required className="w-full mt-1 p-2 border rounded" />
               </label>
 
               <label className="block mb-4">
-                Nº de Sócio da Federação Portuguesa de Golfe:
-                <input
-                  type="text"
-                  name="socio"
-                  required
-                  className="w-full mt-1 p-2 border border-gray-300 rounded"
-                />
+                Nº de Sócio:
+                <input type="text" name="socio" required className="w-full mt-1 p-2 border rounded" />
               </label>
 
               <label className="block mb-6">
@@ -91,7 +98,7 @@ export default function Eventos() {
                   required
                   pattern="[0-9]{9}"
                   title="Número de 9 dígitos"
-                  className="w-full mt-1 p-2 border border-gray-300 rounded"
+                  className="w-full mt-1 p-2 border rounded"
                 />
               </label>
 
@@ -103,7 +110,6 @@ export default function Eventos() {
                 >
                   Cancelar
                 </button>
-
                 <button
                   type="submit"
                   className="px-4 py-2 bg-lime-500 text-white font-semibold rounded hover:bg-lime-400"

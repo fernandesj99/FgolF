@@ -27,15 +27,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/eventos": [
+    "/admin": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/eventos.js"
+      "static/chunks/pages/admin.js"
     ],
-    "/eventos/open-lisboa": [
+    "/admin/login": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/eventos/open-lisboa.js"
+      "static/chunks/pages/admin/login.js"
     ]
   },
   "ampFirstPages": []
