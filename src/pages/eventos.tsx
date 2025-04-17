@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { supabase } from '../lib/supabase';
 import Link from 'next/link';
 import { eventos } from '../data/eventos';
+import Countdown from '../components/countdown'
 
 export default function Eventos() {
   const [eventoSelecionado, setEventoSelecionado] = useState<string | null>(null);
@@ -45,8 +46,11 @@ export default function Eventos() {
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
         {eventos.map((evento, idx) => (
           <div key={idx} className="bg-gray-800 p-6 rounded shadow">
+          <div className="text-center">  
             <h2 className="text-xl font-semibold text-lime-300">{evento.nome}</h2>
             <p className="text-gray-300 mt-2">{evento.data}</p>
+            <Countdown targetDate={evento.dataCompleta} />
+          </div>
 
             <div className="flex justify-between items-center mt-6 gap-4">
               <button
@@ -100,6 +104,11 @@ export default function Eventos() {
                   title="Número de 9 dígitos"
                   className="w-full mt-1 p-2 border rounded"
                 />
+              </label>
+
+              <label className="block mb-6 text-sm text-gray-800">
+                <input type="checkbox" required className="mr-2" />
+                Autorizo o uso dos meus dados para efeitos de inscrição e comunicação, conforme os termos e condições do torneio.
               </label>
 
               <div className="flex justify-between">

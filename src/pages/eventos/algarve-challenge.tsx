@@ -66,6 +66,11 @@ export default function AlgarveChallenge() {
                 <input type="tel" name="telemovel" required pattern="[0-9]{9}" className="w-full mt-1 p-2 border border-gray-300 rounded" />
               </label>
 
+              <label className="block mb-6 text-sm text-gray-800">
+                <input type="checkbox" required className="mr-2" />
+                Declaro que autorizo o tratamento dos meus dados pessoais para efeitos de gestão da inscrição no evento, comunicação institucional e envio de informações relevantes, nos termos da legislação aplicável em matéria de proteção de dados.
+              </label>
+              
               <div className="flex justify-between">
                 <button type="button" onClick={() => setMostrarModal(false)} className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Cancelar</button>
                 <button type="submit" className="px-4 py-2 bg-lime-500 text-white font-semibold rounded hover:bg-lime-400">Confirmar</button>

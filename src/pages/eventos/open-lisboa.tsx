@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { eventos } from '../../data/eventos';
+import Countdown from '../../components/countdown'
 
 export default function OpenLisboa() {
   const [mostrarModal, setMostrarModal] = useState(false);
@@ -10,9 +11,12 @@ export default function OpenLisboa() {
   return (
     <div className="min-h-screen bg-black text-white px-6 py-12">
       <h1 className="text-4xl font-bold text-lime-400 mb-4">{evento.nome}</h1>
+      <Countdown targetDate="2025-04-21T11:00:00" />
       <p className="mb-1">Data: {evento.data}</p>
       <p className="mb-1">Hora: {evento.hora}</p>
       <p className="mb-4">Local: {evento.local}</p>
+
+
 
       <p className="mb-4">{evento.descricao}</p>
 
@@ -64,6 +68,11 @@ export default function OpenLisboa() {
               <label className="block mb-6">
                 Nº de Telemóvel:
                 <input type="tel" name="telemovel" required pattern="[0-9]{9}" className="w-full mt-1 p-2 border border-gray-300 rounded" />
+              </label>
+
+              <label className="block mb-6 text-sm text-gray-800">
+                <input type="checkbox" required className="mr-2" />
+                Declaro que autorizo o tratamento dos meus dados pessoais para efeitos de gestão da inscrição no evento, comunicação institucional e envio de informações relevantes, nos termos da legislação aplicável em matéria de proteção de dados.
               </label>
 
               <div className="flex justify-between">

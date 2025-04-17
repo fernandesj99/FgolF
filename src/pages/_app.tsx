@@ -19,9 +19,10 @@ export default function App({ Component, pageProps }: any) {
         <ul className="flex gap-6 text-lg font-semibold">
           <li><Link href="/">Home</Link></li>
           <li><Link href="/eventos">Eventos</Link></li>
-          <li><Link href="/jogadores">Jogadores</Link></li>
+          <li><Link href="/resultados">Resultados</Link></li>
           <li><Link href="/noticias">Notícias</Link></li>
-          <li><Link href="/patrocinios">Patrocínios</Link></li>
+          <li><Link href="/parceiros">Parceiros</Link></li>
+          <li><Link href="/galeria">Galeria</Link></li>
         </ul>
       </nav>
       <Component {...pageProps} />
