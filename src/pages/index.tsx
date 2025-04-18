@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Countdown from '../components/Countdown'; // certifica-te de que este componente existe
+import Countdown from '../components/countdown'; 
 
 export default function Home() {
   return (
