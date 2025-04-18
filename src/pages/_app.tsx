@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }: any) {
           <li><Link href="/resultados">Resultados</Link></li>
           <li><Link href="/noticias">Notícias</Link></li>
           <li><Link href="/parceiros">Parceiros</Link></li>
+          <li><Link href="/galeria">Galeria</Link></li>
         </ul>
 
         {/* Ícones sociais à direita */}
