@@ -4,6 +4,7 @@ export const eventos = [
     slug: "open-lisboa",
     data: "21 de Abril de 2025",
     dataCompleta: "2025-04-21T11:00:00",
+    linkYoutubeEvento: "https://www.youtube.com/channel/UCvP7RKs1x7wBHc2TZ_VpkWQ", // colocar aqui link do vídeo do evento
     hora: "11h00",
     local: "Jamor",
     descricao:
@@ -18,6 +19,7 @@ export const eventos = [
     slug: "porto-masters",
     data: "3 de Maio de 2025",
     dataCompleta: "2025-05-03T14:00:00",
+    linkYoutubeEvento: "https://www.youtube.com/channel/UCvP7RKs1x7wBHc2TZ_VpkWQ", // colocar aqui link do vídeo do evento
     hora: "14h00",
     local: "Campo de Golfe de Espinho",
     descricao:
@@ -32,6 +34,7 @@ export const eventos = [
     slug: "algarve-challenge",
     data: "17 de Maio de 2025",
     dataCompleta: "2025-05-17T10:00:00",
+    linkYoutubeEvento: "https://www.youtube.com/channel/UCvP7RKs1x7wBHc2TZ_VpkWQ", // colocar aqui link do vídeo do evento
     hora: "10h00",
     local: "Vilamoura Golf Resort",
     descricao:
