@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import Link from 'next/link';
 import { FaInstagram, FaYoutube, FaXTwitter } from 'react-icons/fa6';
+import Footer from '../components/Footer'; // <- importa o footer aqui
 
 export default function App({ Component, pageProps }: any) {
   return (
@@ -46,6 +47,8 @@ export default function App({ Component, pageProps }: any) {
       </nav>
 
       <Component {...pageProps} />
+
+      <Footer /> {/* <- adiciona o footer aqui */}
     </>
   );
 }

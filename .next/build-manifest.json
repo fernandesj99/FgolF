@@ -27,10 +27,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/eventos/open-lisboa": [
+    "/parceiros": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/eventos/open-lisboa.js"
+      "static/chunks/pages/parceiros.js"
     ]
   },
   "ampFirstPages": []
