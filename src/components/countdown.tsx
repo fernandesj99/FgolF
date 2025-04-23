@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 interface CountdownProps {
-  targetDate: string; // ISO date format: '2025-04-21T11:00:00'
+  targetDate: string; // ISO date format: '2025-05-17T11:00:00'
 }
 
 export default function Countdown({ targetDate }: CountdownProps) {

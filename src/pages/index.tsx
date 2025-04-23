@@ -1,7 +1,9 @@
 import Link from 'next/link';
-import Countdown from '../components/countdown'; 
+import Countdown from '../components/countdown';
 
 export default function Home() {
+  const slugDoEvento = 'open-lisboa'; // ou vindo de uma variável/fetch no futuro
+
   return (
     <div className="min-h-screen bg-black text-white font-sans flex flex-col items-center px-4 py-12">
       {/* Hero Section */}
@@ -22,11 +24,13 @@ export default function Home() {
       {/* Próximo Evento */}
       <section className="w-full max-w-4xl mt-16 flex justify-center">
         <div className="w-full max-w-md">
-          <div className="p-6 bg-blue-900 rounded shadow text-center">
-            <h2 className="text-xl font-semibold text-lime-400">Próximo Evento</h2>
-            <p className="mt-2 text-gray-300">Jamor, 21 de Abril de 2025 – 11h00</p>
-            <Countdown targetDate="2025-04-21T11:00:00" />
-          </div>
+          <Link href={`/eventos/${slugDoEvento}`}>
+            <div className="p-6 bg-blue-900 rounded shadow text-center cursor-pointer hover:bg-blue-800 transition">
+              <h2 className="text-xl font-semibold text-lime-400">Próximo Evento</h2>
+              <p className="mt-2 text-gray-300">Jamor, 17 de Maio de 2025 – 11h00</p>
+              <Countdown targetDate="2025-05-17T11:00:00" />
+            </div>
+          </Link>
         </div>
       </section>
     </div>

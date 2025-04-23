@@ -11,7 +11,7 @@ export default function OpenLisboa() {
   return (
     <div className="min-h-screen bg-black text-white px-6 py-12">
       <h1 className="text-4xl font-bold text-lime-400 mb-4">{evento.nome}</h1>
-      <Countdown targetDate="2025-04-21T11:00:00" />
+      <Countdown targetDate="2025-05-17T11:00:00" />
       <p className="mb-1">Data: {evento.data}</p>
       <p className="mb-1">Hora: {evento.hora}</p>
       <p className="mb-4">Local: {evento.local}</p>

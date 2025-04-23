@@ -3,6 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/parceiros": "pages/parceiros.js",
-  "/eventos": "pages/eventos.js"
+  "/eventos": "pages/eventos.js",
+  "/eventos/open-lisboa": "pages/eventos/open-lisboa.js"
 }
