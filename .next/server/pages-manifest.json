@@ -3,5 +3,7 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/privacidade": "pages/privacidade.js"
+  "/eventos/porto-masters": "pages/eventos/porto-masters.js",
+  "/eventos/open-lisboa": "pages/eventos/open-lisboa.js",
+  "/eventos": "pages/eventos.js"
 }
