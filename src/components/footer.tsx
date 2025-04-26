@@ -40,8 +40,8 @@ export default function Footer() {
         <Image
           src="/logooficial/logo.png"
           alt="Logo Limitless Golf"
-          width={60}
-          height={60}
+          width={100}
+          height={100}
           className="object-contain"
         />
       </div>

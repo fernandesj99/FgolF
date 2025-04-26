@@ -60,31 +60,33 @@ export default function Eventos() {
                 <Countdown targetDate={evento.dataCompleta} />
               </div>
 
-              <div className="flex flex-col sm:flex-row justify-between items-center mt-6 gap-4">
+
+              <div className="flex flex-col sm:flex-row justify-center items-center mt-6 space-y-2 sm:space-y-0 sm:space-x-2">
                 <button
                   onClick={() => setEventoSelecionado(evento.nome)}
-                  className="w-full sm:w-auto bg-lime-400 text-black font-bold px-4 py-2 rounded hover:bg-lime-300 transition"
+                  className="w-full sm:w-auto bg-lime-400 text-black font-bold px-4 py-2 rounded hover:bg-lime-300 transition transform hover:scale-105"
                 >
                   Inscrever
                 </button>
 
                 <Link href={`/eventos/${evento.slug}`} className="w-full sm:w-auto">
-                  <button className="w-full sm:w-auto bg-blue-500 text-white font-semibold px-4 py-2 rounded hover:bg-blue-600 transition">
-                    Saber mais
+                  <button className="w-full sm:w-auto bg-blue-500 text-white font-bold px-4 py-2 rounded hover:bg-blue-600 transition transform hover:scale-105">
+                  Saber mais
                   </button>
                 </Link>
 
                 <a
                   href={youtubeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="w-full sm:w-auto"
                 >
-                  <button className="w-full sm:w-auto bg-red-600 text-white font-semibold px-4 py-2 rounded hover:bg-red-500 transition">
+                  <button className="w-full sm:w-auto bg-red-600 text-white font-bold px-4 py-2 rounded hover:bg-red-500 transition transform hover:scale-105">
                     Ver
                   </button>
                 </a>
               </div>
+
             </div>
           );
         })}

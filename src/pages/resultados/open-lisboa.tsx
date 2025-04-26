@@ -7,7 +7,7 @@ export default function OpenLisboaResultado() {
         <p className="mb-4">Local: Jamor</p>
   
         <p className="mb-4">
-          O Open Lisboa foi o torneio inaugural do circuito FgolF 2025, reunindo os melhores jogadores num desafio técnico e emocionante no Jamor.
+          O Open Lisboa foi o torneio inaugural do circuito Limitless Golf 2025, reunindo os melhores jogadores num desafio técnico e emocionante no Jamor.
         </p>
   
         <div className="bg-blue-900 p-4 rounded mb-6">

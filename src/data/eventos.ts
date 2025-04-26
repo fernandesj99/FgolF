@@ -8,7 +8,7 @@ export const eventos = [
     hora: "11h00",
     local: "Jamor",
     descricao:
-      "O Open Lisboa é o torneio inaugural do circuito FgolF 2025, reunindo os melhores jogadores num desafio técnico e emocionante no Jamor.",
+      "O Open Lisboa é o torneio inaugural do circuito Limitless Golf 2025, reunindo os melhores jogadores num desafio técnico e emocionante no Jamor.",
     preco: "25€",
     premio: "200€",
     ofertas: "Kit de boas-vindas, t-shirt oficial, bebida energética",
@@ -41,7 +41,7 @@ export const eventos = [
       "O Algarve Challenge fecha a primavera do circuito com uma etapa solarenga no sul. Um campo técnico e paisagens incríveis garantem emoção até ao fim.",
     preco: "60€",
     premio: "1000€",
-    ofertas: "Polo oficial FgolF, snacks energéticos, vouchers",
+    ofertas: "Pólo oficial, snacks energéticos, vouchers",
     patrocinadores: ["Galp", "Callaway", "Delta Cafés"],
   },
 ];
