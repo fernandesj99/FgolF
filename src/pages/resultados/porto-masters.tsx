@@ -2,7 +2,7 @@ export default function PortoMastersResultado() {
     return (
       <div className="min-h-screen bg-black text-white px-6 py-12">
         <h1 className="text-4xl font-bold text-lime-400 mb-4">Porto Masters</h1>
-        <p className="mb-1">Data: 3 de Maio de 2025</p>
+        <p className="mb-1">Data: 28 de Junho de 2025</p>
         <p className="mb-1">Hora: 14h00</p>
         <p className="mb-4">Local: Campo de Golfe de Espinho</p>
   

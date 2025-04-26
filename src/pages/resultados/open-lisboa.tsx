@@ -2,7 +2,7 @@ export default function OpenLisboaResultado() {
     return (
       <div className="min-h-screen bg-black text-white px-6 py-12">
         <h1 className="text-4xl font-bold text-lime-400 mb-4">Open Lisboa</h1>
-        <p className="mb-1">Data: 21 de Abril de 2025</p>
+        <p className="mb-1">Data: 17 de Maio de 2025</p>
         <p className="mb-1">Hora: 11h00</p>
         <p className="mb-4">Local: Jamor</p>
   

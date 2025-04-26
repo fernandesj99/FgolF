@@ -13,7 +13,7 @@ export default function Resultados() {
             <p className="text-gray-300 mt-2">{evento.data}</p>
 
             <div className="mt-4 flex flex-col gap-2">
-              <Link href={`/resultados/${evento.slug}`}>
+              <Link href={`/eventos/${evento.slug}`}>
                 <button className="w-full bg-blue-500 text-white font-semibold px-4 py-2 rounded hover:bg-blue-600 transition">
                   Saber mais
                 </button>
@@ -36,7 +36,8 @@ export default function Resultados() {
                 rel="noopener noreferrer"
                 className="w-full"
               >
-                <button className="w-full bg-lime-500 text-black font-semibold px-4 py-2 rounded hover:bg-lime-400 transition">
+            {/* <button className="w-full bg-lime-500 text-black font-semibold px-4 py-2 rounded hover:bg-lime-400 transition"> */}
+                <button className="w-full bg-green-800 text-white font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
                   Resultados (PDF)
                 </button>
               </a>

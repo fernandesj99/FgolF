@@ -61,10 +61,12 @@ export default function Eventos() {
               </div>
 
 
+
               <div className="flex flex-col sm:flex-row justify-center items-center mt-6 space-y-2 sm:space-y-0 sm:space-x-2">
                 <button
                   onClick={() => setEventoSelecionado(evento.nome)}
-                  className="w-full sm:w-auto bg-lime-400 text-black font-bold px-4 py-2 rounded hover:bg-lime-300 transition transform hover:scale-105"
+                  className="w-full sm:w-auto bg-green-800 text-white font-bold px-4 py-2 rounded hover:bg-green-700 transition transform hover:scale-105"
+                /*className="w-full sm:w-auto bg-lime-400 text-black font-bold px-4 py-2 rounded hover:bg-lime-300 transition transform hover:scale-105" */
                 >
                   Inscrever
                 </button>

@@ -14,9 +14,18 @@ export default function Home() {
           <p>Acompanha os eventos, explora os jogadores, vive a emoção.</p>
         </div>
 
+        
         <Link href="/eventos">
-          <button className="mt-8 px-6 py-3 bg-lime-400 text-black font-bold rounded hover:bg-lime-300 transition">
-            Ver próximos eventos
+         {/* 
+         <button className="mt-8 px-6 py-3 bg-lime-400 text-black font-bold rounded hover:bg-lime-300 transition">
+          */}
+         <button className="mt-8 px-6 py-3 bg-green-800 text-white font-bold rounded hover:bg-green-700 transition hover:scale-105">
+
+           Ver próximos eventos
+          
+
+        
+        
           </button>
         </Link>
       </section>
@@ -26,7 +35,8 @@ export default function Home() {
         <div className="w-full max-w-md max-w-[90%]">
           <Link href={`/eventos/${slugDoEvento}`}>
             <div className="p-6 bg-blue-900 rounded shadow text-center cursor-pointer hover:bg-blue-800 transition">
-              <h2 className="text-xl font-semibold text-lime-400">Próximo Evento</h2>
+              <h2 className="text-xl font-semibold text-white-800">Próximo Evento</h2>
+           {/*<h2 className="text-xl font-semibold text-lime-400">Próximo Evento</h2>*/}
               <p className="mt-2 text-gray-300">Jamor, 17 de Maio de 2025 – 11h00</p>
               <Countdown targetDate="2025-05-17T11:00:00" />
             </div>
