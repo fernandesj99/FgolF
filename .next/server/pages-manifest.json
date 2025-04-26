@@ -2,7 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/eventos": "pages/eventos.js",
   "/": "pages/index.js",
-  "/eventos/open-lisboa": "pages/eventos/open-lisboa.js"
+  "/eventos": "pages/eventos.js",
+  "/galeria": "pages/galeria.js",
+  "/resultados": "pages/resultados.js"
 }

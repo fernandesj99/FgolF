@@ -6,3 +6,7 @@ html, body {
   @apply font-sans;
   overflow-x: hidden;
 }
+
+button {
+  @apply transition-transform transform hover:scale-105 duration-300;
+}
