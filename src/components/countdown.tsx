@@ -33,7 +33,7 @@ export default function Countdown({ targetDate }: CountdownProps) {
   }
 
   return (
-    <div className="text-3xl font-bold text-center text-white mt-6">
+    <div className="text-3xl font-bold text-center text-black mt-6">
       {timeLeft.days}D : {timeLeft.hours}H : {timeLeft.minutes}M : {timeLeft.seconds}S
     </div>
   );

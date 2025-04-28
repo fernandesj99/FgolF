@@ -53,10 +53,10 @@ export default function Eventos() {
               : 'https://www.youtube.com/channel/UCvP7RKs1x7wBHc2TZ_VpkWQ';
 
           return (
-            <div key={idx} className="bg-gray-800 p-6 rounded shadow">
+            <div key={idx} className="bg-gray-100 p-6 rounded shadow">
               <div className="text-center">
-                <h2 className="text-xl font-semibold text-white">{evento.nome}</h2>
-                <p className="text-gray-300 mt-2">{evento.data}</p>
+                <h2 className="text-xl font-semibold text-black">{evento.nome}</h2>
+                <p className="text-gray-700 mt-2">{evento.data}</p>
                 <Countdown targetDate={evento.dataCompleta} />
               </div>
 

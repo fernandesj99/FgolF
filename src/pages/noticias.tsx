@@ -25,10 +25,10 @@ export default function Noticias() {
         {noticias.map((noticia, idx) => (
           <div
             key={idx}
-            className="bg-gray-800 p-6 rounded shadow hover:bg-green-800 transition"
+            className="bg-gray-100 p-6 rounded shadow hover:bg-green-800 transition"
           >
-            <h2 className="text-2xl font-semibold text-white mb-2">{noticia.titulo}</h2>
-            <p className="text-gray-300">{noticia.descricao}</p>
+            <h2 className="text-2xl font-semibold text-black mb-2">{noticia.titulo}</h2>
+            <p className="text-gray-700">{noticia.descricao}</p>
             <p className="mt-2 text-sm text-gray-500">{noticia.data}</p>
           </div>
         ))}

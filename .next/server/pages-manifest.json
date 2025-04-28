@@ -2,9 +2,10 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/galeria": "pages/galeria.js",
   "/eventos": "pages/eventos.js",
-  "/parceiros": "pages/parceiros.js",
   "/resultados": "pages/resultados.js",
-  "/": "pages/index.js",
-  "/noticias": "pages/noticias.js"
+  "/noticias": "pages/noticias.js",
+  "/parceiros": "pages/parceiros.js",
+  "/": "pages/index.js"
 }
