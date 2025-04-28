@@ -1,13 +1,13 @@
 // pages/termos.tsx
 export default function Termos() {
     return (
-      <div className="min-h-screen bg-black text-white py-12 px-4">
-        <div className="max-w-5xl mx-auto bg-gray-900 p-8 rounded shadow-lg">
-          <h1 className="text-3xl md:text-4xl font-bold text-lime-400 mb-6">
+      <div className="min-h-screen py-12 px-4">
+        <div className="max-w-5xl mx-auto bg-gray-800 p-8 rounded shadow-lg">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Termos de Utilização
           </h1>
   
-          <p className="mb-6 text-gray-300">
+          <p className="mb-6 text-white">
             Ao utilizar o website da Limitless Golf, o utilizador concorda com os seguintes termos e
             condições. Estes termos aplicam-se a todos os visitantes, utilizadores e qualquer outro
             que acedam ou utilizem o serviço.
@@ -15,7 +15,7 @@ export default function Termos() {
   
           <div className="space-y-6">
             <div>
-              <h2 className="text-xl font-semibold text-white mb-2">1. Uso do Website</h2>
+              <h2 className=" text-white text-xl font-semibold text-white mb-2">1. Uso do Website</h2>
               <p className="text-gray-400">
                 Este site é destinado à divulgação de eventos desportivos, nomeadamente torneios de
                 golfe. Ao inscrever-se, o utilizador compromete-se a fornecer informações verídicas e

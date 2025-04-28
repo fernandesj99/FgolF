@@ -12,6 +12,11 @@
   ],
   "rootMainFiles": [],
   "pages": {
+    "/": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -27,10 +32,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/eventos.js"
     ],
-    "/eventos/algarve-challenge": [
+    "/noticias": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/eventos/algarve-challenge.js"
+      "static/chunks/pages/noticias.js"
+    ],
+    "/parceiros": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/parceiros.js"
     ],
     "/resultados": [
       "static/chunks/webpack.js",

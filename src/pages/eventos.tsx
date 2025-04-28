@@ -40,8 +40,8 @@ export default function Eventos() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white p-10">
-      <h1 className="text-4xl font-bold text-lime-400 mb-8 text-center">Eventos</h1>
+    <div className="min-h-screen p-10">
+      <h1 className="text-4xl font-bold text-black-400 mb-8 text-center">Eventos</h1>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
         {eventos.map((evento, idx) => {
@@ -55,7 +55,7 @@ export default function Eventos() {
           return (
             <div key={idx} className="bg-gray-800 p-6 rounded shadow">
               <div className="text-center">
-                <h2 className="text-xl font-semibold text-lime-300">{evento.nome}</h2>
+                <h2 className="text-xl font-semibold text-white">{evento.nome}</h2>
                 <p className="text-gray-300 mt-2">{evento.data}</p>
                 <Countdown targetDate={evento.dataCompleta} />
               </div>
@@ -66,13 +66,12 @@ export default function Eventos() {
                 <button
                   onClick={() => setEventoSelecionado(evento.nome)}
                   className="w-full sm:w-auto bg-green-800 text-white font-bold px-4 py-2 rounded hover:bg-green-700 transition transform hover:scale-105"
-                /*className="w-full sm:w-auto bg-lime-400 text-black font-bold px-4 py-2 rounded hover:bg-lime-300 transition transform hover:scale-105" */
                 >
                   Inscrever
                 </button>
 
                 <Link href={`/eventos/${evento.slug}`} className="w-full sm:w-auto">
-                  <button className="w-full sm:w-auto bg-blue-500 text-white font-bold px-4 py-2 rounded hover:bg-blue-600 transition transform hover:scale-105">
+                  <button className="w-full sm:w-auto bg-green-600 text-white font-bold px-4 py-2 rounded hover:bg-green-600 transition transform hover:scale-105">
                   Saber mais
                   </button>
                 </Link>
@@ -83,7 +82,7 @@ export default function Eventos() {
                  rel="noopener noreferrer"
                  className="w-full sm:w-auto"
                 >
-                  <button className="w-full sm:w-auto bg-red-600 text-white font-bold px-4 py-2 rounded hover:bg-red-500 transition transform hover:scale-105">
+                  <button className="w-full sm:w-auto bg-green-400 text-white font-bold px-4 py-2 rounded hover:bg-green-400 transition transform hover:scale-105">
                     Ver
                   </button>
                 </a>
@@ -115,6 +114,11 @@ export default function Eventos() {
 
               <label className="block mb-4">
                 Nº de Sócio:
+                <input type="text" name="socio" required className="w-full mt-1 p-2 border rounded" />
+              </label>
+
+              <label className="block mb-4">
+                Handicap:
                 <input type="text" name="socio" required className="w-full mt-1 p-2 border rounded" />
               </label>
 

@@ -8,15 +8,15 @@ export default function AlgarveChallenge() {
   if (!evento) return <div className="text-white p-10">Evento não encontrado.</div>;
 
   return (
-    <div className="min-h-screen bg-black text-white px-6 py-12">
-      <h1 className="text-4xl font-bold text-lime-400 mb-4">{evento.nome}</h1>
+    <div className="min-h-screen px-6 py-12">
+      <h1 className="text-4xl font-bold text-black-400 mb-4">{evento.nome}</h1>
       <p className="mb-1">Data: {evento.data}</p>
       <p className="mb-1">Hora: {evento.hora}</p>
       <p className="mb-4">Local: {evento.local}</p>
 
       <p className="mb-4">{evento.descricao}</p>
 
-      <div className="bg-blue-900 p-4 rounded mb-6">
+      <div className="bg-gray-300 p-4 rounded mb-6">
         <p><strong>Prize Pool:</strong> {evento.premio}</p>
         <p><strong>Custo de Entrada:</strong> {evento.preco}</p>
         <p><strong>Ofertas Incluídas:</strong> {evento.ofertas}</p>
@@ -26,7 +26,7 @@ export default function AlgarveChallenge() {
       <div className="text-center">
         <button
           onClick={() => setMostrarModal(true)}
-          className="bg-lime-500 text-black font-semibold py-2 px-6 rounded hover:bg-lime-400 transition"
+          className="bg-green-800 text-white font-semibold py-2 px-6 rounded hover:bg-green-400 transition"
         >
           Inscrever
         </button>

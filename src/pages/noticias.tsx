@@ -2,7 +2,7 @@ export default function Noticias() {
   const noticias = [
     {
       titulo: "Novo circuito anunciado para o verão",
-      descricao: "A temporada de verão trará novos campos e desafios aos jogadores do FgolF.",
+      descricao: "A temporada de verão trará novos campos e desafios aos jogadores do Limitless Golf.",
       data: "07 de Abril de 2025",
     },
     {
@@ -12,22 +12,22 @@ export default function Noticias() {
     },
     {
       titulo: "Parceria com a Federação Portuguesa de Golfe",
-      descricao: "FgolF anuncia apoio oficial e novas oportunidades para sócios federados.",
+      descricao: "Limitless Golf anuncia apoio oficial e novas oportunidades para sócios federados.",
       data: "28 de Março de 2025",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white px-6 py-12">
-      <h1 className="text-4xl font-bold text-lime-400 text-center mb-12">Notícias</h1>
+    <div className="min-h-screen px-6 py-12">
+      <h1 className="text-4xl font-bold text-black-400 text-center mb-12">Notícias</h1>
 
       <div className="max-w-5xl mx-auto grid gap-8">
         {noticias.map((noticia, idx) => (
           <div
             key={idx}
-            className="bg-blue-900 p-6 rounded shadow hover:bg-blue-800 transition"
+            className="bg-gray-800 p-6 rounded shadow hover:bg-green-800 transition"
           >
-            <h2 className="text-2xl font-semibold text-lime-300 mb-2">{noticia.titulo}</h2>
+            <h2 className="text-2xl font-semibold text-white mb-2">{noticia.titulo}</h2>
             <p className="text-gray-300">{noticia.descricao}</p>
             <p className="mt-2 text-sm text-gray-500">{noticia.data}</p>
           </div>

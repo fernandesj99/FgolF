@@ -3,7 +3,8 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/eventos": "pages/eventos.js",
-  "/eventos/open-lisboa": "pages/eventos/open-lisboa.js",
-  "/eventos/algarve-challenge": "pages/eventos/algarve-challenge.js",
-  "/resultados": "pages/resultados.js"
+  "/parceiros": "pages/parceiros.js",
+  "/resultados": "pages/resultados.js",
+  "/": "pages/index.js",
+  "/noticias": "pages/noticias.js"
 }

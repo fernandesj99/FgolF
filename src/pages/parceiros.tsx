@@ -33,14 +33,14 @@ export default function Patrocinios() {
     ];
   
     return (
-      <div className="min-h-screen bg-black text-white px-6 py-12">
-        <h1 className="text-4xl font-bold text-lime-400 text-center mb-12">Patrocínios</h1>
+      <div className="min-h-screen px-6 py-12">
+        <h1 className="text-4xl font-bold text-black-400 text-center mb-12">Parceiros</h1>
   
         <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {patrocinadores.map((p, idx) => (
-            <div key={idx} className="bg-blue-900 p-6 rounded shadow flex flex-col items-center text-center hover:bg-blue-800 transition">
+            <div key={idx} className="bg-gray-800 p-6 rounded shadow flex flex-col items-center text-center hover:bg-green-800 transition">
               <img src={p.logo} alt={p.nome} className="h-20 mb-4 object-contain" />
-              <h2 className="text-2xl font-semibold text-lime-300 mb-2">{p.nome}</h2>
+              <h2 className="text-2xl font-semibold text-white mb-2">{p.nome}</h2>
               <p className="text-gray-300">{p.descricao}</p>
             </div>
           ))}
