@@ -118,7 +118,7 @@ export default function Eventos() {
               </label>
 
               <label className="block mb-4">
-                Handicap:
+                Handicap FPG:
                 <input type="text" name="socio" required className="w-full mt-1 p-2 border rounded" />
               </label>
 
