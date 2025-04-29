@@ -24,8 +24,20 @@ export default function OpenLisboa() {
         <p><strong>Prize Pool:</strong> {evento.premio}</p>
         <p><strong>Custo de Entrada:</strong> {evento.preco}</p>
         <p><strong>Ofertas Incluídas:</strong> {evento.ofertas}</p>
-        <p><strong>Patrocínios:</strong> {evento.patrocinadores.join(', ')}</p>
+        <p><strong>Parceiros:</strong> {evento.patrocinadores.join(', ')}</p>
+        
+        <p className="mt-2">
+          <a
+            href={evento.regulamento}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 underline hover:text-blue-700"
+          >
+            Regulamento do Torneio (PDF)
+          </a>
+        </p>
       </div>
+
 
       <div className="text-center">
         <button
