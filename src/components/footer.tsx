@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-gray-400 px-6 py-10 text-sm">
+    <footer className="bg-gray-200 text-gray-700 px-6 py-10 text-sm">
       <div className="flex justify-center">
         <div className="max-w-4xl w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-center">
           <div>
-            <h4 className="text-white font-bold mb-2">Sobre</h4>
+            <h4 className="text-black font-bold mb-2">Sobre</h4>
             <ul className="space-y-1">
               <li><Link href="/eventos">Eventos</Link></li>
               <li><Link href="/parceiros">Parceiros</Link></li>
@@ -17,7 +17,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-2">Legal</h4>
+            <h4 className="text-black font-bold mb-2">Legal</h4>
             <ul className="space-y-1">
               <li><Link href="/termos">Termos de Utilização</Link></li>
               <li><Link href="/privacidade">Política de Privacidade</Link></li>
@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-2">Segue-nos</h4>
+            <h4 className="text-black font-bold mb-2">Segue-nos</h4>
             <div className="flex justify-center space-x-4 text-lg">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
               <a href="https://x.com" target="_blank" rel="noopener noreferrer"><FaXTwitter /></a>
