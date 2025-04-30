@@ -17,21 +17,21 @@ export default function Eventos() {
     const nome = formData.get('nome')?.toString() || '';
     const email = formData.get('email')?.toString() || '';
     const socio = formData.get('socio')?.toString() || '';
+    const handicap = formData.get('handicap')?.toString() || '';
     const telemovel = formData.get('telemovel')?.toString() || '';
     const evento = eventoSelecionado;
 
-    // Inserir no Supabase
+    // Inserir na Supabase
     const { data, error } = await supabase.from('inscricoes').insert([
-      { evento, nome, email, socio, telemovel },
+      { evento, nome, email, socio, handicap, telemovel },
     ]);
-
     console.log('SUPABASE:', { data, error });
 
-    // Enviar para Formspree
-    await fetch('https://formspree.io/f/xeoavogl', {
+    // Enviar email via Resend
+    await fetch('/api/sendEmail', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ evento, nome, email, socio, telemovel }),
+      body: JSON.stringify({ evento, nome, email, socio, handicap, telemovel }),
     });
 
     // Redirecionar
@@ -60,8 +60,6 @@ export default function Eventos() {
                 <Countdown targetDate={evento.dataCompleta} />
               </div>
 
-
-
               <div className="flex flex-col sm:flex-row justify-center items-center mt-6 space-y-2 sm:space-y-0 sm:space-x-2">
                 <button
                   onClick={() => setEventoSelecionado(evento.nome)}
@@ -72,28 +70,26 @@ export default function Eventos() {
 
                 <Link href={`/eventos/${evento.slug}`} className="w-full sm:w-auto">
                   <button className="w-full sm:w-auto bg-green-600 text-white font-bold px-4 py-2 rounded hover:bg-green-600 transition transform hover:scale-105">
-                  Saber mais
+                    Saber mais
                   </button>
                 </Link>
 
                 <a
                   href={youtubeLink}
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 className="w-full sm:w-auto"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
                 >
                   <button className="w-full sm:w-auto bg-green-400 text-white font-bold px-4 py-2 rounded hover:bg-green-400 transition transform hover:scale-105">
                     Ver
                   </button>
                 </a>
               </div>
-
             </div>
           );
         })}
       </div>
 
-      {/* Modal de inscrição */}
       {eventoSelecionado && eventoObj && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
           <div className="bg-white text-black rounded p-8 w-full max-w-md shadow-lg">
@@ -119,7 +115,7 @@ export default function Eventos() {
 
               <label className="block mb-4">
                 Handicap FPG:
-                <input type="text" name="socio" required className="w-full mt-1 p-2 border rounded" />
+                <input type="text" name="handicap" required className="w-full mt-1 p-2 border rounded" />
               </label>
 
               <label className="block mb-6">

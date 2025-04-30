@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { eventos } from '../../data/eventos';
-import Countdown from '../../components/countdown'
+import Countdown from '../../components/countdown';
+import { sendEmail } from '../../lib/sendEmail';
 
 export default function OpenLisboa() {
   const [mostrarModal, setMostrarModal] = useState(false);
@@ -8,15 +9,38 @@ export default function OpenLisboa() {
 
   if (!evento) return <div className="text-white p-10">Evento não encontrado.</div>;
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const nome = formData.get('nome')?.toString() || '';
+    const email = formData.get('email')?.toString() || '';
+    const socio = formData.get('socio')?.toString() || '';
+    const handicap = formData.get('handicap')?.toString() || '';
+    const telemovel = formData.get('telemovel')?.toString() || '';
+
+    await sendEmail({
+      evento: evento.nome,
+      nome,
+      email,
+      socio,
+      handicap,
+      telemovel,
+    });
+
+    setMostrarModal(false);
+    window.location.href = `/pagamento?evento=${evento.slug}`;
+  };
+
   return (
     <div className="min-h-screen px-6 py-12">
       <h1 className="text-4xl font-bold text-black-400 mb-4">{evento.nome}</h1>
-      <Countdown targetDate="2025-05-17T11:00:00" />
+      <Countdown targetDate={evento.dataCompleta} />
       <p className="mb-1">Data: {evento.data}</p>
       <p className="mb-1">Hora: {evento.hora}</p>
       <p className="mb-4">Local: {evento.local}</p>
-
-
 
       <p className="mb-4">{evento.descricao}</p>
 
@@ -25,7 +49,6 @@ export default function OpenLisboa() {
         <p><strong>Custo de Entrada:</strong> {evento.preco}</p>
         <p><strong>Ofertas Incluídas:</strong> {evento.ofertas}</p>
         <p><strong>Parceiros:</strong> {evento.patrocinadores.join(', ')}</p>
-        
         <p className="mt-2">
           <a
             href={evento.regulamento}
@@ -37,7 +60,6 @@ export default function OpenLisboa() {
           </a>
         </p>
       </div>
-
 
       <div className="text-center">
         <button
@@ -53,16 +75,7 @@ export default function OpenLisboa() {
           <div className="bg-white text-black rounded p-8 w-full max-w-md shadow-lg">
             <h3 className="text-xl font-bold mb-4">Inscrição no {evento.nome}</h3>
 
-            <form
-              action="https://formspree.io/f/xeoavogl"
-              method="POST"
-              target="_self"
-              onSubmit={() => {
-                setTimeout(() => {
-                  window.location.href = `https://fgolf.vercel.app/pagamento?evento=${evento.slug}`;
-                }, 1000);
-              }}
-            >
+            <form onSubmit={handleSubmit}>
               <input type="hidden" name="evento" value={evento.nome} />
 
               <label className="block mb-4">
@@ -76,6 +89,10 @@ export default function OpenLisboa() {
               <label className="block mb-4">
                 Nº de Sócio:
                 <input type="text" name="socio" required className="w-full mt-1 p-2 border border-gray-300 rounded" />
+              </label>
+              <label className="block mb-4">
+                Handicap FPG:
+                <input type="text" name="handicap" required className="w-full mt-1 p-2 border border-gray-300 rounded" />
               </label>
               <label className="block mb-6">
                 Nº de Telemóvel:

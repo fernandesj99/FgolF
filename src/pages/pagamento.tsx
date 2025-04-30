@@ -20,7 +20,7 @@ export default function Pagamento() {
       <div className="max-w-xl mx-auto bg-100 p-8 rounded shadow-lg text-center">
         <h1 className="text-3xl font-bold text-black mb-6">Inscrição recebida!</h1>
 
-        <p className="mb-4">Obrigado por te inscreveres no <strong className="text-lime-300">{evento.nome}</strong>.</p>
+        <p className="mb-4">Obrigado por te inscreveres no <strong className="text-green-700">{evento.nome}</strong>.</p>
         <p className="mb-4">Data: {evento.data} | Hora: {evento.hora}</p>
         <p className="mb-4">Local: {evento.local}</p>
 
